@@ -25,7 +25,7 @@ print("")
 
 while True:
     cave_number = int(input("Cave 1 or 2: "))
-    if cave_number in [1, 2]:
+    if cave_number in [1, 2, 3, 4, 5]:
         break
     
 cave.pick_cave(cave_number)
