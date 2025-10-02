@@ -1,7 +1,7 @@
 #Import libs
-import libs.input_taker as picker
+import libs.cave_picker as cave
 
-
+cave_number = 0
 # Start of the game
 print(r"""
   _____                                 _____                      
@@ -22,5 +22,10 @@ share his treasure with you.
 The other dragon is hungry and will eat you on sight""")
 print("")
 
-cave_number = int(input("Cave 1 or 2: "))
-picker.validate_user_choice(cave_number)
+
+while True:
+    cave_number = int(input("Cave 1 or 2: "))
+    if cave_number in [1, 2]:
+        break
+    
+cave.pick_cave(cave_number)
